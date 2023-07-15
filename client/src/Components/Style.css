@@ -1,0 +1,97 @@
+.header {
+  margin: 20px;
+  text-decoration: underline;
+  font-size: 50px;
+  font-weight: bold;
+  color: yellowgreen;
+  text-align: center;
+}
+  
+.input1 { 
+  margin: 5px auto;
+  width: 25%;
+  height: 50px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 0 10px;
+  
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+
+
+
+.btn1,
+.btn2 {
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 5px;
+  
+}
+
+.btn1 {
+  background-color: #1e90ff;
+  border-radius: 30px;
+}
+
+.btn2 {
+  background-color: #4a47ff;
+  border-radius: 10px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.btn1:hover,
+.btn2:hover {
+  background-color: #00bfff;
+}  
+
+.new1 {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.mynew1 {
+  padding: 3px 10px;
+  margin: 3px;
+  background-color: black;
+  color: white;
+  border-radius: 20px;
+}
+
+
+
+#alert {
+  color: blue;
+  font-weight: bold;
+}
+.seat-count {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.seat-count-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.seat-count-item p {
+  margin: 0;
+}
+
+.seat-count-item strong {
+  margin-right:10px;
+}
+.seat-count-item strong{
+margin-right:10px;
+}
