@@ -1,25 +1,24 @@
 const cors = require("cors");
 const express = require("express");
-const { connection } = require("./config/db");
+const connectDB = require("./config/db");
 const { seatRouter } = require("./routes/SeatRoutes");
+const colors = require("colors");
+const dotenv = require("dotenv");
 const app = express();
 app.use(express.json());
 app.use(cors());
 
+//dot.env
+dotenv.config();
+//database
+connectDB();
+
 app.use("/", seatRouter);
-app.listen(5000, async () => {
-  try {
-    await connection;
-    console.log("Connected to the Database");
-  } catch (error) {
-    console.log("Connection Error:", error);
-  }
-  console.log(`Server is running on port 5000`);
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(
+    `Server Running in ${process.env.DEV_MODE} mode on port no ${PORT}`.bgCyan
+      .white
+  );
 });
-
-
-
-
-
-
 

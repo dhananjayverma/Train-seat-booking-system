@@ -1,9 +1,13 @@
-const mongoose = require("mongoose");
+const mongoose=require("mongoose");
+const colors=require("colors");
+const connectDB=async()=>{
+    try{
+        await mongoose.connect(process.env.MONGO_URL)
+        console.log(`mongo db connencted ${mongoose.connection.host}`.bgGreen.white
+        );
 
-const connection = mongoose.connect(
-  "mongodb+srv://suraj:sk2023assignment@trainapp.4dtyag0.mongodb.net/?retryWrites=true&w=majority"
-);
-
-module.exports = {
-  connection,
-};
+    }catch(error){
+        console.log(`mongodb database error ${error}`.bgRed.white)
+    }
+}
+module.exports=connectDB;
